@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+ <name>File_POD</name>
+ <channel>pear.php.net</channel>
+ <summary>Parse POD out of source files</summary>
+ <description>Provides base classes for reading Plain Old Documentation (POD) from
+source files of various different languages. Based on the common standard
+for documentation in Perl it is a convenient, if not rigorous way of
+documenting code inline using a syntax which allows exporting the
+documenation into different display formats</description>
+ <lead>
+  <name>Alex Monney</name>
+  <user>alexmonney</user>
+  <email>php@monney.me</email>
+  <active>yes</active>
+ </lead>
+ <date>2012-03-22</date>
+ <time>18:08:47</time>
+ <version>
+  <release>0.1</release>
+  <api>0.1</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.apache.org/licenses/">Apache</license>
+ <notes>
+just starting out
+ </notes>
+ <contents>
+  <dir baseinstalldir="." name="/">
+   <file baseinstalldir="." md5sum="e3b303380ae2a93cf718112243a4e594" name="File/POD.php" role="php" />
+   <file baseinstalldir="." md5sum="978230a40824f9417ad2511acec1fc98" name="File/POD/Parser.php" role="php" />
+   <file baseinstalldir="." md5sum="d78af45c29de301b9ee8f4d517e689f4" name="File/POD/Parser/Js.php" role="php" />
+   <file baseinstalldir="." md5sum="13c84a1542351f8bec1f3bc492a72d56" name="File/POD/Parser/PHP.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.1</release>
+    <api>0.1</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2012-03-22</date>
+   <license uri="http://www.apache.org/licenses/">Apache</license>
+   <notes>
+just starting out
+   </notes>
+  </release>
+ </changelog>
+</package>
