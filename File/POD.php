@@ -56,7 +56,7 @@ This can be set or changed after construction using the filename() method.
                 $files = scandir($parserdir);
                 foreach ($files as $parser){
                     if (preg_match("/(.*)\.php$/", $parser, $matches)){
-                        require_once($parserdir . '/' . $parser);
+                        require_once($parserdir . DIRECTORY_SEPARATOR . $parser);
                         # for some reason this won'r accept relative class path. Meh.
                         $classname = "\\File\\POD\\Parser\\" . $matches[1];
                         $parser_ob = new $classname();
@@ -309,6 +309,7 @@ Returns a list of pod objects found.
 =cut*/
 
     function find_pod($basedir, $dir=''){
+        # TODO refactor to use File class's find_all_files() method 
         $basedir = (preg_match("/\/$/", $basedir)) ? $basedir : $basedir . '/';
         $dir = ($dir=='' || preg_match("/\/$/", $dir)) ? $dir : $dir . '/';
 
