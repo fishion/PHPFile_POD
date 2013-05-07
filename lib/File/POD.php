@@ -170,6 +170,7 @@ If this key exists, the generated contents links at the top of the HTML are ommi
 =cut*/
     function pod2html($options=array()){
         if (!$this->instructions){ $this->parse(); }
+        if (!$this->instructions){ return; }
         $instructions = $this->instructions;
         $out = '';
         $index = -1;
@@ -263,6 +264,7 @@ An associative array, the keys for which consist of filename which should be ign
     function dependencies($paths=array(), $ignore=array()){
         if (!$this->dependencies){
             if (!$this->instructions){ $this->parse(); }
+            if (!$this->instructions){ return; }
             $this->dependencies = array();
         
             $indep = False;
