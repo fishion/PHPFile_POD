@@ -239,7 +239,7 @@ Get the classname from the POD
             foreach ($this->instructions as $inst){
                 if (preg_match("/^head/i", $inst['element']) &&
                     strtolower($inst['title']) == 'name') {
-                    return $inst['content'][0];
+                    $this->classname = preg_replace('/\n/','',$inst['content'][0]);
                 }
             }
         }
