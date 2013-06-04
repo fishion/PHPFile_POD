@@ -180,7 +180,7 @@ If this key exists, the generated contents links at the top of the HTML are ommi
             $index++;
             $hlevel = 1;
             if (preg_match("/head(\d)/", $inst['element'], $hlevel)){
-                $out .= '<h' . $hlevel[1] . ' id="POD_' . htmlentities($inst['title']) . '">' . htmlentities($inst['title']) . '</h' . $hlevel[1] . '>';
+                $out .= '<h' . $hlevel[1] . ' id="POD_' . preg_replace('/\s/', '_', htmlentities($inst['title'])) . '">' . htmlentities($inst['title']) . '</h' . $hlevel[1] . '>';
                 while ($content_indent != $hlevel[1]){
                     if ($content_indent < $hlevel[1]){
                         $contents .= "<ul>\n";
@@ -190,7 +190,7 @@ If this key exists, the generated contents links at the top of the HTML are ommi
                         $content_indent--;
                     }
                 }
-                $contents .= '<li><a href="#POD_'. htmlentities($inst['title']) .'">'. htmlentities($inst['title']) .'</a></li>';
+                $contents .= '<li><a href="#POD_'. preg_replace('/\s/', '_', htmlentities($inst['title'])) .'">'. htmlentities($inst['title']) .'</a></li>';
             } else if ($inst['element'] == 'over'){
                 // look forward a little and choose dl or ul
                 $this->add_to_nesting(
